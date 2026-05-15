@@ -9,7 +9,9 @@ local current_git_dir = ''
 local branch_cache = {} -- stores last known branch for a buffer
 local active_bufnr = '0'
 -- os specific path separator
-local sep = package.config:sub(1, 1)
+-- local sep = package.config:sub(1, 1)
+-- no, use '/' always?
+local sep = '/'
 -- event watcher to watch head file
 -- Use file watch for non Windows and poll for Windows.
 -- Windows doesn't like file watch for some reason.
